@@ -1,0 +1,35 @@
+<div id="recent_posts_plus62-2" class="widget clearfix widget_posts_wrap"><!-- <h4 class="widgettitle"><span>Recent Posts</span>
+</h4>
+
+        <div class="widget_posts">
+
+
+            {% for post in site.posts limit:6 %}
+            <article>
+                <a href="{{ post.url }}" rel="bookmark" title="{{ post.title }}">
+                <header class="clearfix recent-posts">
+                    <p class="meta">
+                        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}
+                        </time>
+                    </p>
+
+                    {% if post.img %}
+                    <section class="home-thumb alignleft"><img src="{{ site.url }}/assets/images/{{ post.img.small }}" width="100" height="100" class="attachment-post-thumbnail wp-post-image pib-hover-img"/></section>
+                    {% endif %}
+
+                    <h4 class="h4">
+
+                            {{ post.title }}
+
+                    </h4>
+                </header>
+                </a>
+            </article>
+            {% endfor %}
+
+
+
+        </div>
+        -->
+        <div class="clear"><!-- --></div>
+</div>

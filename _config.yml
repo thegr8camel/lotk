@@ -1,0 +1,25 @@
+# Permalinks
+permalink:        pretty
+relative_permalinks: true
+
+# Setup
+title:            Lady of the Kitchen
+tagline:          Live through food
+description:      A home cooking blog &amp; gathering place for friends around good food.
+url:              http://ladyofthekitchen.com
+img_url:          http://ladyofthekitchen.com/public/images/
+canonical:        http://ladyofthekitchen.com
+publisher:        //plus.google.com/118183551359283892502/
+facebook:         https://www.facebook.com/ladyofthekitchen
+paginate:         5
+paginate_path:    "/page/:num/"
+permalink:        "/:title"
+baseurl:          /
+author:
+  name:           Camelia
+  url:            http://ladyofthekitchen.com
+
+# Custom vars
+version:          1.0.0
+github:
+  repo:           https://github.com/rhettrainen/ladyofthekitchen

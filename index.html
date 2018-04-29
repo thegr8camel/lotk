@@ -1,0 +1,38 @@
+---
+layout: default
+title: Home
+---
+
+{% for post in paginator.posts %}
+<article class="post-11683 post type-post status-publish format-standard has-post-thumbnail hentry category-travel clearfix" role="article">
+    <header>
+        <h2 class="post-title h2">
+            <a href="{{ post.url }}" rel="bookmark" title="{{ post.title }}">
+                {{ post.title }}
+            </a>
+        </h2>
+
+        <div class="meta">
+            <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}
+            </time>
+        </div>
+    </header>
+    <section class="post_content clearfix">
+        {% if post.img %}
+        <a href="{{ post.url }}"><img src="{{site.img_url}}{{ post.img.large }}" width="800" height="533" class="aligncenter size-full wp-image-11686 pib-hover-img"/></a>
+        {% endif %}
+        {% if post.content contains "<!-- more -->" %}
+            {{ post.content | split:"<!-- more -->" | first % }}
+        {% else %}
+            {{ post.content | strip_html | truncatewords:100 }}
+        {% endif %}
+        <div class="category-meta">
+            <p class="home-author">Written by <a href="{{ site.url }}/about/" title="{{ site.author.name }}" rel="author">{{ site.author.name }}</a></p>
+            <p class="home-comment"><a href="{{ post.url }}#comments" title="{{ post.title }}"><span class="dsq-postid" data-dsqidentifier="">comments</span></a></p>
+        </div>
+        <div class="read-more">
+            <a href="{{ post.url }}">Read more &rsaquo;</a>
+        </div>
+    </section>
+</article>
+{% endfor %}
